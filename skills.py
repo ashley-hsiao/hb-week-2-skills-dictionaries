@@ -181,6 +181,7 @@ def translate_to_pirate_talk(phrase):
     return " ".join(new_text)
 
     # LIST COMPREHENSION MAY BE POSSIBLE - CHECK BACK LATER
+    # may need to look up dictionary comprehension
 
 
 def sort_by_word_length(words):
@@ -197,7 +198,18 @@ def sort_by_word_length(words):
         [(1, ['a']), (2, ['ok', 'an']), (3, ['day']), (5, ['apple'])]
     """
 
-    return []
+    word_length_count = {}
+
+    # Loops through words and binds word-length and word (as a list, instead of string) to word_length_count as a key-value pair
+    # Adds word to the values of 'word_length' if this key already exists in 'word-length_count'
+    for word in words:
+        if len(word) in word_length_count:
+            word_length_count[len(word)] += [word]
+        else:
+            word_length_count[len(word)] = [word]
+
+    # Used .iteritems() to generate a list of (key, value) tuples and sorts ascendingly - could use .items() as well
+    return sorted(word_length_count.items())
 
 
 def get_sum_zero_pairs(numbers):
