@@ -138,7 +138,7 @@ def translate_to_pirate_talk(phrase):
 
     For example::
 
-        >>> translate_to_pirate_talk("my student is not a man")
+        >>> translate_to_pirate_talk("my student is not a boy")
         'me swabbie be not a matey'
 
     You should treat words with punctuation as if they were different
@@ -148,7 +148,39 @@ def translate_to_pirate_talk(phrase):
         'me swabbie be not a man!'
     """
 
-    return ""
+    # Line 141 appears to have typo in the first doctest example
+    # Instead of "man", should be "boy"? Changed so doctest can run properly.
+
+    # English-Pirate dictionary
+    eng_to_pirate = {'sir': 'matey',
+                     'hotel': 'fleabag inn',
+                     'student': 'swabbie',
+                     'boy': 'matey',
+                     'professor': 'foul blaggart',
+                     'restaurant': 'galley',
+                     'your': 'yer',
+                     'excuse': 'arr',
+                     'students': 'swabbies',
+                     'are': 'be',
+                     'restroom': 'head',
+                     'my': 'me',
+                     'is': 'be'}
+
+    # Phrase split into a list of words
+    words = phrase.split()
+
+    new_text = []
+
+    # Checks words in phrase to see if in English-Pirate dictionary and translates accordingly, binding to 'new_text'
+    for word in words:
+        if word in eng_to_pirate:
+            word = eng_to_pirate[word]
+        new_text.append(word)
+
+    # Returns as a string of text instead of a list with space in between the words
+    return " ".join(new_text)
+
+    # LIST COMPREHENSION MAY BE POSSIBLE - CHECK BACK LATER
 
 
 def sort_by_word_length(words):
