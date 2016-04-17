@@ -63,7 +63,8 @@ def find_unique_common_items(items1, items2):
         [2]
     """
 
-    return []
+    # Converts both lists to sets, uses set math to find the common items, then converts back to a list
+    return list(set(items1) & set(items2))
 
 
 def count_words(phrase):
