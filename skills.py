@@ -32,7 +32,7 @@ def without_duplicates(words):
         [2, 33333, 111111]
     """
 
-    # Converts to a set to remote duplicates, then converts back to a list
+    # Convert to a set to remove duplicates, then convert back to a list
     return list(set(words))
 
 
@@ -63,7 +63,7 @@ def find_unique_common_items(items1, items2):
         [2]
     """
 
-    # Converts both lists to sets, uses set math to find the common items, then converts back to a list
+    # Convert both lists to sets, use set math to find the common items, then convert back to a list
     return list(set(items1) & set(items2))
 
 
@@ -96,13 +96,14 @@ def count_words(phrase):
 
     words = phrase.split()
 
+    # # FIRST METHOD
     # for word in words:
     #     if word in word_count:
     #         word_count[word] += 1
     #     else:
     #         word_count[word] = 1
 
-    # Uses .get() method
+    # SECOND METHOD - Use .get() method
     for word in words:
         word_count[word] = word_count.get(word, 0) + 1
 
@@ -149,9 +150,9 @@ def translate_to_pirate_talk(phrase):
     """
 
     # Line 141 appears to have typo in the first doctest example
-    # Instead of "man", should be "boy"? Changed so doctest can run properly.
+    # Instead of "man", it should be "boy"? Changed so doctest can run properly
 
-    # English-Pirate dictionary
+    # Create English-Pirate dictionary
     eng_to_pirate = {'sir': 'matey',
                      'hotel': 'fleabag inn',
                      'student': 'swabbie',
@@ -166,18 +167,18 @@ def translate_to_pirate_talk(phrase):
                      'my': 'me',
                      'is': 'be'}
 
-    # Phrase split into a list of words
+    # Split phrase into a list of words
     words = phrase.split()
 
     new_text = []
 
-    # Loops through words to see if word is in English-Pirate dictionary and translates accordingly, binding word to 'new_text'
+    # Loop through words to see if in English-Pirate dictionary and translate accordingly. Bind word to 'new_text'.
     for word in words:
         if word in eng_to_pirate:
             word = eng_to_pirate[word]
         new_text.append(word)
 
-    # Returns as a string of text instead of a list with space in between the words
+    # Return a string of text instead of a list with space in between the words
     return " ".join(new_text)
 
     # LIST COMPREHENSION MAY BE POSSIBLE - CHECK BACK LATER
@@ -200,14 +201,15 @@ def sort_by_word_length(words):
 
     word_length_count = {}
 
-    # Loops through words and sets key-value pairs (word-length and list of words), adds word to value of key if key already in dictionary
+    # Loop through words and set key-value pairs (word-length and list of words). Add word to value of key if key already in dictionary.
     for word in words:
         if len(word) in word_length_count:
             word_length_count[len(word)] += [word]
         else:
             word_length_count[len(word)] = [word]
 
-    # Used .iteritems() to generate a list of (key, value) tuples and sorts ascendingly - could use .items() as well
+    # Use .iteritems() to generate a list of (key, value) tuples and sort ascendingly
+    # Could use .items() as well, but .iteritems() is a generator and does not take as much memory creating a new list
     return sorted(word_length_count.items())
 
 
@@ -237,6 +239,32 @@ def get_sum_zero_pairs(numbers):
         >>> sort_pairs( get_sum_zero_pairs([1, 3, -1, 1, 1, 0]) )
         [[-1, 1], [0, 0]]
     """
+
+    # This question is challenging!!
+
+    i = 0
+    pairs = []
+
+    for num in numbers:
+        num + num[i+1]
+
+    while i < range(len(numbers)):
+        for num in numbers:
+            print num[i]
+            print num
+            if num[i] + num == 0:
+                pairs.append([num[i], num])
+        i += 1
+
+    # numbers = list(set(numbers))
+
+    # num_comparison = {}
+
+    # for i < range(len(numbers)):
+    #     num_comparison[num] = 
+
+    # for num in numbers:
+    #     num_comparison[num] = num
 
     return []
 
@@ -278,6 +306,34 @@ def kids_game(names):
     a dictionary (with the super-fast lookup they provide) can help;
     good solutions here will definitely require a dictionary.
     """
+
+    # This quesiton is challenging!!
+
+    results = []
+
+
+
+    name_checker = {}
+
+    for i in range(len(words)-1):
+        
+        if key not in name_checker:
+            name_checker[key] = []
+
+
+
+
+    word_chain = {}
+
+    starting_word = names[0]
+
+    last_letter = starting_word[-1]
+
+    for name in names:
+
+        if name in word_chains:
+            
+
 
     return []
 
