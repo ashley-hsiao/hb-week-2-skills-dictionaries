@@ -241,8 +241,30 @@ def get_sum_zero_pairs(numbers):
     """
 
     # This question is challenging!!
+    # DID NOT FINISH
 
-    i = 0
+    # Remove duplicates
+    numbers = without_duplicates(numbers)
+
+    number_pairs = []
+
+    for i in range(len(numbers)-1):
+        number_pair = [numbers[i], numbers[i+1]]
+        number_pairs.append(number_pair)
+
+
+    if 0 in numbers:
+        number_pairs.append([0, 0])
+    else:
+
+
+
+    number_pairing = {}
+
+    for num in numbers:
+        number_pairing[num] = []
+
+
     pairs = []
 
     for num in numbers:
@@ -308,6 +330,7 @@ def kids_game(names):
     """
 
     # This quesiton is challenging!!
+    # DID NOT FINISH
 
     results = []
 
