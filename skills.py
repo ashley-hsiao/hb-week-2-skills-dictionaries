@@ -171,7 +171,7 @@ def translate_to_pirate_talk(phrase):
 
     new_text = []
 
-    # Checks words in phrase to see if in English-Pirate dictionary and translates accordingly, binding to 'new_text'
+    # Loops through words to see if word is in English-Pirate dictionary and translates accordingly, binding word to 'new_text'
     for word in words:
         if word in eng_to_pirate:
             word = eng_to_pirate[word]
@@ -200,8 +200,7 @@ def sort_by_word_length(words):
 
     word_length_count = {}
 
-    # Loops through words and binds word-length and word (as a list, instead of string) to word_length_count as a key-value pair
-    # Adds word to the values of 'word_length' if this key already exists in 'word-length_count'
+    # Loops through words and sets key-value pairs (word-length and list of words), adds word to value of key if key already in dictionary
     for word in words:
         if len(word) in word_length_count:
             word_length_count[len(word)] += [word]
