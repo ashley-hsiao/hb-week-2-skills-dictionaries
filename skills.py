@@ -92,7 +92,21 @@ def count_words(phrase):
         {'Porcupine': 1, 'do.': 1, 'porcupine': 1, 'see,': 1}
     """
 
-    return {}
+    word_count = {}
+
+    words = phrase.split()
+
+    # for word in words:
+    #     if word in word_count:
+    #         word_count[word] += 1
+    #     else:
+    #         word_count[word] = 1
+
+    # Uses .get() method
+    for word in words:
+        word_count[word] = word_count.get(word, 0) + 1
+
+    return word_count
 
 
 def translate_to_pirate_talk(phrase):
