@@ -181,8 +181,7 @@ def translate_to_pirate_talk(phrase):
     # Return a string of text instead of a list with space in between the words
     return " ".join(new_text)
 
-    # LIST COMPREHENSION MAY BE POSSIBLE - CHECK BACK LATER
-    # may need to look up dictionary comprehension
+    # LIST/DICT COMPREHENSION MAY BE POSSIBLE?? CHECK BACK LATER
 
 
 def sort_by_word_length(words):
@@ -243,52 +242,28 @@ def get_sum_zero_pairs(numbers):
     # This question is challenging!!
     # DID NOT FINISH
 
-    # Remove duplicates
-    numbers = without_duplicates(numbers)
+    # # Remove duplicates - function is same as list(set(numbers))
+    # numbers = without_duplicates(numbers)
 
-    number_pairs = []
+    # number_pairs = []
 
-    for i in range(len(numbers)-1):
-        number_pair = [numbers[i], numbers[i+1]]
-        number_pairs.append(number_pair)
-
-
-    if 0 in numbers:
-        number_pairs.append([0, 0])
-    else:
-
-
-
-    number_pairing = {}
-
-    for num in numbers:
-        number_pairing[num] = []
-
-
-    pairs = []
-
-    for num in numbers:
-        num + num[i+1]
-
-    while i < range(len(numbers)):
-        for num in numbers:
-            print num[i]
-            print num
-            if num[i] + num == 0:
-                pairs.append([num[i], num])
-        i += 1
-
-    # numbers = list(set(numbers))
-
-    # num_comparison = {}
-
-    # for i < range(len(numbers)):
-    #     num_comparison[num] = 
-
+    # # Keeps looping through and multiple conditionals...
     # for num in numbers:
-    #     num_comparison[num] = num
+    #     for num2 in numbers:
+    #         if num != num2:
+    #             if num + num2 == 0:
+    #                 number_pairs.append([num, num2])
+    #     if num == 0:
+    #         number_pairs.append([0, 0])
 
-    return []
+    # for pair in number_pairs:
+
+    # # How to use dictionaries?
+
+    # number_pairing = {}
+
+
+    # return []
 
 
 def kids_game(names):
@@ -332,33 +307,33 @@ def kids_game(names):
     # This quesiton is challenging!!
     # DID NOT FINISH
 
-    results = []
+    # results = []
 
 
 
-    name_checker = {}
+    # name_checker = {}
 
-    for i in range(len(words)-1):
+    # for i in range(len(words)-1):
         
-        if key not in name_checker:
-            name_checker[key] = []
+    #     if key not in name_checker:
+    #         name_checker[key] = []
 
 
 
 
-    word_chain = {}
+    # word_chain = {}
 
-    starting_word = names[0]
+    # starting_word = names[0]
 
-    last_letter = starting_word[-1]
+    # last_letter = starting_word[-1]
 
-    for name in names:
+    # for name in names:
 
-        if name in word_chains:
+    #     if name in word_chains:
             
 
 
-    return []
+    # return []
 
 
 #####################################################################
